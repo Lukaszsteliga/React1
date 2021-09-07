@@ -7,10 +7,10 @@ export default class FetchRandomUser extends React.Component {
   };
 
   async componentDidMount() {
-    const url = "https://api.randomuser.me/";
+    const url = "https://kkbusy.herokuapp.com/katowiceToKrakow?fbclid=IwAR3EgD9A0Lu0IKVY5ZXkkZPf8Bho0z-e9PHDnqpzgpwBta9wkBG00_R3Mbw";
     const response = await fetch(url);
     const data = await response.json();
-    this.setState({ person: data.results[0], loading: false });
+    this.setState({ person: data[0], loading: false });
   }
 
   render() {
@@ -24,10 +24,10 @@ export default class FetchRandomUser extends React.Component {
 
     return (
       <div>
-        <div>{this.state.person.name.title}</div>
-        <div>{this.state.person.name.first}</div>
-        <div>{this.state.person.name.last}</div>
-        <img src={this.state.person.picture.large} />
+        <div>{this.state.person.id}</div>
+        <div>{this.state.person.stop}</div>
+        <div>{this.state.person.price}</div>
+        <div>{this.state.person.distance}</div>
       </div>
     );
   }
