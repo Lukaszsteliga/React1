@@ -24,7 +24,7 @@ export default class FetchRandomUser extends React.Component {
     
    return (
     <div>
-      <div>Rozkład jazdy:</div>
+      <h1>Rozkład jazdy:</h1>
       {this.state.people.map(person => (
         <div key={person.id}>
           <div>{person.id} {person.stop} {person.price} {person.distance}</div>
