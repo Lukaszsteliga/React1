@@ -7,7 +7,7 @@ export default class FetchRandomUser extends React.Component {
   };
 
   async componentDidMount() {
-    const url = "https://kkbusy.herokuapp.com/katowiceToKrakow?fbclid=IwAR3EgD9A0Lu0IKVY5ZXkkZPf8Bho0z-e9PHDnqpzgpwBta9wkBG00_R3Mbw";
+    const url = "https://kkbusy.herokuapp.com/krakowToKatowice";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ people: data, loading: false });
@@ -24,6 +24,7 @@ export default class FetchRandomUser extends React.Component {
     
    return (
     <div>
+      <div>Rozkład jazdy:</div>
       {this.state.people.map(person => (
         <div key={person.id}>
           <div>{person.id} {person.stop} {person.price} {person.distance}</div>

@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: powderblue;
   height: 150px;
   padding: 20px;
   color: white;
@@ -36,5 +36,5 @@
 }
 
 .visible {
-  background-color: #f2f2f2;
+  background-color: powderblue;
 }
